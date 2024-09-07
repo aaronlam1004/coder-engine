@@ -13,11 +13,19 @@ class PythonSolution(ISolution):
 
     @override
     def Generate(self) -> str:
-        py_code = ""
+        py_code = "from typing import *\n"
+        py_code += "import sys\n\n"
+        lib_path = os.path.join(os.path.dirname(__file__), "lib")
+        py_code += f"sys.path.append(\"{lib_path}\")\n\n".replace("\\", "\\\\")
+        py_code += f"from ListNode import ListNode\n\n"
+
         if os.path.exists(self.solution_file):
             with open(self.solution_file, 'r') as py_file:
-                py_code = py_file.read()
-        py_code = "from typing import List\n" + py_code
+                py_code += py_file.read()
+
+        # for import_file in imports:
+        #     print(import_file)
+
         return py_code
 
     @override

@@ -1,0 +1,9 @@
+{
+	"name": "",
+	"problem": "",
+	"entrypoint": "",
+	"includes": ["ListNode"],
+	"cases": [
+		[true, [[3, 2], [2, 0], [0, -4], [-4, 3]]
+	]
+}

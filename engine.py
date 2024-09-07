@@ -4,8 +4,10 @@ from enum import Enum
 from interfaces.ISolution import ISolution
 from interfaces.IEngine import IEngine
 
-from py.solution import PythonSolution
-from py.engine import PythonEngine
+from py.PythonSolution import PythonSolution
+from py.PythonEngine import PythonEngine
+
+from py.lib.ListNode import ListNode
 
 class CoderLanguage(Enum):
     PYTHON = "PYTHON"
@@ -21,10 +23,20 @@ class CoderEngine:
 
     def Run(self) -> None:
         self.solution.Export()
-        self.engine.Run([1, 2], args = ([2, 7, 11, 15], 9))
+        # self.engine.Run([1, 2], args = ([2, 7, 11, 15], 9))
+        head = ListNode(3)
+        head.next = ListNode(2)
+        head.next.next = ListNode(0)
+        head.next.next = ListNode(-4)
+        head.next.next.next = head
+        self.engine.Run(True, args = (head, ))
 
 if __name__ == '__main__':
-    engine = CoderEngine(PythonSolution, PythonEngine, "TwoSumII.py", "twoSum")
-    engine.Run()
+    # Two Sum II
+    # engine = CoderEngine(PythonSolution, PythonEngine, "TwoSumII.py", "twoSum")
+    # engine.Run()
 
+    # Linked List Cycle
+    engine = CoderEngine(PythonSolution, PythonEngine, "LinkedListCycle.py", "hasCycle")
+    engine.Run()
 
