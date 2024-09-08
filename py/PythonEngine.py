@@ -3,23 +3,16 @@ import sys
 import importlib
 import time
 from typing import Tuple, override
+import subprocess
 
-sys.path.append("..")
+HOME_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+sys.path.append(HOME_PATH)
 
 from interfaces.IEngine import IEngine 
 
 class PythonEngine(IEngine):
     @override
-    def __init__(self, solution: str, solution_call: str):
-        super().__init__(solution, solution_call)
-
-    @override
-    def Run(self, expected: any, args: Tuple[any] = tuple()):
-        if os.path.exists("build") and os.path.exists(os.path.join("build", f"{self.solution}.py")):
-            start = time.time()
-            solution_module = importlib.import_module(f"build.{self.solution}")
-            solution = solution_module.Solution()
-            call = getattr(solution, self.solution_call)
-            result = call(*args) == expected
-            process_time_ms = (time.time() - start) * 1000
-            print(args, process_time_ms, result)
+    def Run(self):
+        main = os.path.join(HOME_PATH, "build", "main.py")
+        if os.path.exists(main):
+            subprocess.call(f"python {main} problems/TwoSumII/cases/case1.txt", shell=True)
