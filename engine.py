@@ -24,19 +24,13 @@ class CoderEngine:
     def Run(self) -> None:
         self.solution.Export()
         self.engine.Run()
-        # head = ListNode(3)
-        # head.next = ListNode(2)
-        # head.next.next = ListNode(0)
-        # head.next.next = ListNode(-4)
-        # head.next.next.next = head
-        # self.engine.Run(True, args = (head, ))
 
 if __name__ == '__main__':
     # Two Sum II
-    engine = CoderEngine(PythonSolution, PythonEngine, "TwoSumII.py", os.path.join("problems", "TwoSumII", "TwoSumIIRun.py"))
-    engine.Run()
+    # engine = CoderEngine(PythonSolution, PythonEngine, "TwoSumII.py", os.path.join("problems", "TwoSumII", "TwoSumIIRun.py"))
+    # engine.Run()
 
     # Linked List Cycle
-    # engine = CoderEngine(PythonSolution, PythonEngine, "LinkedListCycle.py", "hasCycle")
-    # engine.Run()
+    engine = CoderEngine(PythonSolution, PythonEngine, "LinkedListCycle.py", os.path.join("problems", "LinkedListCycle", "LinkedListCycleRun.py"))
+    engine.Run()
 

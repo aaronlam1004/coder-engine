@@ -18,11 +18,11 @@ class PythonSolution(ISolution):
         py_code = "from typing import *\n"
         py_code += "import os\n"
         py_code += "import sys\n\n"
+
         lib_path = os.path.join(os.path.dirname(__file__), "lib")
+        shutil.copytree(lib_path, os.path.join(HOME_PATH, "build", "lib"), dirs_exist_ok=True)
 
-        py_code += f"sys.path.append(\"{lib_path}\")\n\n".replace("\\", "\\\\")
-
-        py_code += f"from ListNode import ListNode\n\n"
+        py_code += f"from lib.ListNode import ListNode\n\n"
         # for import_file in imports:
         #     print(import_file)
 
