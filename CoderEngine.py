@@ -7,9 +7,6 @@ from interfaces.IEngine import IEngine
 
 FILE_PATH = os.path.dirname(__file__)
 
-from py.PythonSolution import PythonSolution
-from py.PythonEngine import PythonEngine
-
 class CoderLanguage(Enum):
     PYTHON = "PYTHON"
 
@@ -33,17 +30,8 @@ class CoderEngine:
     def Compile(self) -> None:
         self.solution.Compile()
 
-    def Run(self) -> None:
+    def Run(self) -> bool:
+        result = True
         for case in self.cases:
-            self.engine.Run(case)
-
-if __name__ == '__main__':
-    # Two Sum II
-    # engine = CoderEngine(PythonSolution, PythonEngine, "TwoSumII.py", os.path.join("problems", "TwoSumII", "TwoSumIIRun.py"))
-    # engine.Run()
-
-    # Linked List Cycle
-    engine = CoderEngine(PythonSolution, PythonEngine, "LinkedListCycle.py", os.path.join(FILE_PATH, "problems", "LinkedListCycle", "LinkedListCycleRun.py"), modules = ["ListNode"], cases = [os.path.join(FILE_PATH, "problems", "LinkedListCycle", "cases", "case1.txt")])
-    engine.Compile()
-    engine.Run()
-
+            result &= self.engine.Run(case)
+        return result
