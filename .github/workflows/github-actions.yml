@@ -1,0 +1,12 @@
+name: Lets Code GitHub Actions
+on: [push]
+jobs:
+  Running-Unit-Tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install pytest
+        run: pip3 install pytest 
+      - name: Run Unit Tests
+        run: pytest tests

@@ -9,11 +9,11 @@ sys.path.append(HOME_PATH)
 from interfaces.ISolution import ISolution
 
 class PythonSolution(ISolution):
-    @override
+    # @override
     def __init__(self, solution_file: str, run_file: str, modules: List[str] = []):
         super().__init__(solution_file, run_file, modules)
 
-    @override
+    # @override
     def GenerateSolution(self) -> str:
         py_code = "from typing import *\n"
         py_code += "import os\n"
@@ -34,7 +34,7 @@ class PythonSolution(ISolution):
 
         return py_code
 
-    @override
+    # @override
     def GenerateMain(self) -> str:
         main_code = ""
         main_file = os.path.join(os.path.dirname(__file__), "main.py")
@@ -48,7 +48,7 @@ class PythonSolution(ISolution):
         main_code = main_code.replace("# {{ RUN_IMPORT }}", f"from {module} import *")
         return main_code
 
-    @override
+    # @override
     def Compile(self) -> None:
         solution_code = self.GenerateSolution()
         solution_file = os.path.join(HOME_PATH, "build", "solution.py")

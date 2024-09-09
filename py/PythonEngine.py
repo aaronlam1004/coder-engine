@@ -2,7 +2,7 @@ import os
 import sys
 import importlib
 import time
-from typing import Tuple, override
+from typing import * 
 import subprocess
 
 HOME_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -11,7 +11,7 @@ sys.path.append(HOME_PATH)
 from interfaces.IEngine import IEngine 
 
 class PythonEngine(IEngine):
-    @override
+    # @override
     def Run(self, input_file: str) -> bool:
         main = os.path.join(HOME_PATH, "build", "main.py")
         exit_code = subprocess.call(f"python {main} {input_file}", shell=True)
