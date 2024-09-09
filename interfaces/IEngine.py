@@ -5,5 +5,5 @@ class IEngine(ABC):
     __metaclass__ = ABCMeta
 
     @abstractmethod
-    def Run(self) -> None:
+    def Run(self, input_file: str) -> None:
         pass
