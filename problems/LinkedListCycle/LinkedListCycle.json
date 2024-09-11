@@ -1,9 +1,14 @@
 {
-	"name": "",
-	"problem": "",
-	"entrypoint": "",
-	"includes": ["ListNode"],
+	"name": "LinkedListCycle",
+	"description": "LinkedListCycle.md",
+	"runner": "LinkedListCycle.py",
+	"modules": [
+		"ListNode"
+	],
+	"template": "LinkedListCycle.txt",
 	"cases": [
-		[true, [[3, 2], [2, 0], [0, -4], [-4, 3]]
+		"cases/case1.txt",
+		"cases/case2.txt",
+		"cases/case3.txt"
 	]
 }

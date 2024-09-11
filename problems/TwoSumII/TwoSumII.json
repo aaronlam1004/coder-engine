@@ -1,11 +1,10 @@
 {
 	"name": "TwoSumII",
-	"problem": "",
-	"entrypoint": "twoSum",
-	"includes": [],
+	"description": "TwoSumII.md",
+	"runner": "TwoSumIIRun.py",
+	"modules": [],
+	"template": "TwoSumII.txt",
 	"cases": [
-		[[1, 2], [[2,7,11,15], 9]],
-		[[1, 3], [[2, 3, 4], 6]],
-		[[1, 2], [[-1, 0], -1]]
+		"cases/case1.txt"
 	]
 }
