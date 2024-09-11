@@ -1,7 +1,7 @@
 import os
 import sys
 import shutil
-from typing import *
+from typing import List
 
 HOME_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.append(HOME_PATH)

@@ -1,5 +1,7 @@
 name: Lets Code GitHub Actions
-on: [push]
+on:
+  push:
+    - master
 jobs:
   Running-Unit-Tests:
     runs-on: ubuntu-latest

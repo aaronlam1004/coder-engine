@@ -2,7 +2,6 @@ import os
 import sys
 import importlib
 import time
-from typing import * 
 import subprocess
 
 HOME_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
