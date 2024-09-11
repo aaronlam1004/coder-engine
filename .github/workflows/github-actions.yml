@@ -1,10 +1,9 @@
 name: Lets Code GitHub Actions
-on:
-  push:
-    - master
+on: [push]
 jobs:
   Running-Unit-Tests:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/head/master'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
