@@ -27,6 +27,12 @@ class CoderEngine:
         if not os.path.exists(os.path.join(FILE_PATH, "build")):
             os.makedirs(os.path.join(FILE_PATH, "build"), exist_ok=True)
 
+    def ChangeEngine(self, engine: IEngine) -> None:
+        self.engine = engine
+
+    def ChangeSolution(self, solution: ISolution) -> None:
+        self.solution = solution
+
     def Compile(self) -> None:
         self.solution.Compile()
 

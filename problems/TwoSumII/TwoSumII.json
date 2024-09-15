@@ -1,10 +1,14 @@
 {
 	"name": "TwoSumII",
 	"description": "TwoSumII.md",
-	"runner": "TwoSumIIRun.py",
-	"modules": [],
-	"template": "TwoSumII.txt",
 	"cases": [
 		"cases/case1.txt"
-	]
+	],
+	"languages": {
+		"py": {
+			"runner": "TwoSumIIRun.py",
+			"modules": [],
+			"template": "TwoSumII.txt"
+		}
+	}
 }
