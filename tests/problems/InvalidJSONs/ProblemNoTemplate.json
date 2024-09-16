@@ -7,8 +7,7 @@
 	"languages": {
 		"py": {
 			"runner": "TwoSumIIRun.py",
-			"modules": [],
-			"template": "TwoSumII.txt"
+			"modules": []
 		}
 	}
 }

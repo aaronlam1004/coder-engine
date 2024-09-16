@@ -1,0 +1,13 @@
+name: Let's Code (Push master) Actions
+on: [push]
+jobs:
+  Running-Unit-Tests:
+    runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/master' }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install pytest
+        run: pip3 install pytest 
+      - name: Run Unit Tests
+        run: pytest tests

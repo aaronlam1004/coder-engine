@@ -1,9 +1,6 @@
 {
 	"name": "TwoSumII",
 	"description": "TwoSumII.md",
-	"cases": [
-		"case1.txt"
-	],
 	"languages": {
 		"py": {
 			"runner": "TwoSumIIRun.py",

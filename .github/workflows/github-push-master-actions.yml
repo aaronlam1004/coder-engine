@@ -1,9 +1,8 @@
-name: Lets Code GitHub Actions
-on: [push]
+name: Let's Code (Pull Request) Actions
+on: [pull_request]
 jobs:
   Running-Unit-Tests:
     runs-on: ubuntu-latest
-    if: ${{ github.ref == 'refs/heads/master' }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

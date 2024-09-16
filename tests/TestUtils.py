@@ -10,8 +10,8 @@ sys.path.append(os.path.join(HOME_PATH, "py"))
 def GetTestSolutionFile(solution_filename: str) -> str:
     return os.path.join(FILE_PATH, solution_filename)
 
-def GetTestRunFile(problem_name: str, run_filename: str) -> str:
-    return os.path.join(HOME_PATH, "problems", problem_name, run_filename)
+def GetPyRunFile(problem_name: str, run_filename: str) -> str:
+    return os.path.join(HOME_PATH, "problems", problem_name, "py", run_filename)
 
-def GetTestCaseFile(case_filename: str) -> str:
-    return os.path.join(FILE_PATH, "cases", case_filename)
+def GetTestCaseFile(problem_name: str, case_filename: str) -> str:
+    return os.path.join(HOME_PATH, "problems", problem_name, "cases", case_filename)
