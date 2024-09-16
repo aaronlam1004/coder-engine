@@ -11,3 +11,14 @@ jobs:
         run: pip3 install pytest 
       - name: Run Unit Tests
         run: pytest tests
+on: [pull_request]
+jobs:
+  Running-Unit-Tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install pytest
+        run: pip3 install pytest 
+      - name: Run Unit Tests
+        run: pytest tests
