@@ -5,7 +5,7 @@
 		"case1.txt"
 	],
 	"languages": {
-		"py": {
+		"abc": {
 			"runner": "TwoSumIIRun.py",
 			"modules": [],
 			"template": "TwoSumII.txt"

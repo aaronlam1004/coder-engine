@@ -1,14 +1,18 @@
 {
 	"name": "LinkedListCycle",
 	"description": "LinkedListCycle.md",
-	"runner": "LinkedListCycle.py",
-	"modules": [
-		"ListNode"
-	],
-	"template": "LinkedListCycle.txt",
 	"cases": [
-		"cases/case1.txt",
-		"cases/case2.txt",
-		"cases/case3.txt"
-	]
+		"case1.txt",
+		"case2.txt",
+		"case3.txt"
+	],
+	"languages": {
+		"py": {
+			"runner": "LinkedListCycleRun.py",
+			"modules": [
+				"ListNode"
+			],
+			"template": "LinkedListCycle.txt"
+		}
+	}
 }
