@@ -9,7 +9,7 @@ sys.path.append(HOME_PATH)
 
 from interfaces.IEngine import IEngine 
 
-class PythonEngine(IEngine):
+class CppEngine(IEngine):
     # @override
     def Run(self, input_file: str) -> bool:
         main = os.path.join(HOME_PATH, "build", "main.py")

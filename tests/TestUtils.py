@@ -5,7 +5,7 @@ FILE_PATH = os.path.dirname(__file__)
 HOME_PATH = os.path.join(FILE_PATH, "..")
 
 sys.path.append(HOME_PATH)
-sys.path.append(os.path.join(HOME_PATH, "py"))
+sys.path.append(os.path.join(HOME_PATH, "lang", "py"))
 
 def GetTestSolutionFile(solution_filename: str) -> str:
     return os.path.join(FILE_PATH, solution_filename)

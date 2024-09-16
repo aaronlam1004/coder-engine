@@ -3,7 +3,7 @@ import sys
 import shutil
 from typing import List
 
-HOME_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+HOME_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 sys.path.append(HOME_PATH)
 
 from interfaces.ISolution import ISolution
