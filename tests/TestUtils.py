@@ -11,7 +11,7 @@ def GetTestSolutionFile(solution_filename: str) -> str:
     return os.path.join(FILE_PATH, solution_filename)
 
 def GetPyRunFile(problem_name: str, run_filename: str) -> str:
-    return os.path.join(HOME_PATH, "problems", problem_name, run_filename)
+    return os.path.join(HOME_PATH, "problems", problem_name, "py", run_filename)
 
 def GetTestCaseFile(problem_name: str, case_filename: str) -> str:
     return os.path.join(HOME_PATH, "problems", problem_name, "cases", case_filename)

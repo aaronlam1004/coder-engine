@@ -8,12 +8,12 @@ from PythonSolution import PythonSolution
 from PythonEngine import PythonEngine
 
 def test_PythonSolutions_CanBuildAndRun_ValidSolution():
-    engine = CoderEngine(PythonSolution, PythonEngine, GetTestSolutionFile("py/TwoSumII.py"), GetPyRunFile("TwoSumII", "py/TwoSumIIRun.py"), cases = [GetTestCaseFile("TwoSumII", "case1.txt")])
+    engine = CoderEngine(PythonSolution, PythonEngine, GetTestSolutionFile("py/TwoSumII.py"), GetPyRunFile("TwoSumII", "TwoSumIIRun.py"), cases = [GetTestCaseFile("TwoSumII", "case1.txt")])
     engine.Compile()
     assert engine.Run() == True
 
 def test_PythonSolutions_CanBuildAndRun_InvalidSolution():
-    engine = CoderEngine(PythonSolution, PythonEngine, GetTestSolutionFile("py/TwoSumIIInvalid.py"), GetPyRunFile("TwoSumII", "py/TwoSumIIRun.py"), cases = [GetTestCaseFile("TwoSumII", "case1.txt")])
+    engine = CoderEngine(PythonSolution, PythonEngine, GetTestSolutionFile("py/TwoSumIIInvalid.py"), GetPyRunFile("TwoSumII", "TwoSumIIRun.py"), cases = [GetTestCaseFile("TwoSumII", "case1.txt")])
     engine.Compile()
     assert engine.Run() == False
 
